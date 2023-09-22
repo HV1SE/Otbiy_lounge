@@ -1,0 +1,250 @@
+@font-face {
+    font-family: cyberpunk;
+    src: url(./fonts/Azonix-1VB0.otf);
+}
+:root {
+    --clr-neon: rgba(1, 21, 21, 0.968);
+    --clr-bg: rgb(128, 176, 249);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:cyberpunk;
+}  
+
+body {
+    background-color:rgb(209, 212, 212);
+}
+/* This section header navbar and it's content */
+
+.header-navbar{
+    display:flex;
+    margin:0;
+    padding:0;
+    background-color:#e7eded;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap:wrap;
+}
+
+.website-logo {
+    display:flex;
+    align-items: center;
+    color:rgb(17, 16, 16);
+    margin:10px;
+    margin-left:150px;
+    font-size:30px;
+}
+
+.website-logo:hover {
+    cursor:pointer;
+    color:rgb(34, 147, 188);
+}
+
+.website-logo img{
+    width:60px;
+    height:60px;
+    margin-left:30px;
+}
+
+.navbar-menu {
+    display:flex;
+    padding:0;
+    letter-spacing: 2px;
+}
+
+.navbar-menu li {
+    display:inline-block;
+    padding-inline: 50px;
+    list-style: none;
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    color:rgb(22, 16, 16);
+}
+
+.navbar-menu li a:hover {
+    color:rgb(34, 147, 188);
+}
+
+/* This section regulates Section 1 */
+
+
+.section1 {
+    display:flex;
+    margin-top:2em; 
+    padding:0;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap:wrap;
+    flex-direction: row;
+    width:100%;
+    height:100%;
+}
+#background-section1 {
+    margin-top:5em;
+    position: absolute;
+    width:100%;
+    height:60%;
+    object-fit:cover;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.section1-menu {
+    display:flex;
+    color:white;
+}
+
+.section1-menu-toggle { 
+    display:flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    width:180px;
+    height:180px;
+    position: absolute;
+    left:42em;
+    z-index: 50;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow:inset 0em 0em 2.7em 0em var(--clr-neon), 0 0 4em 0 var(--clr-bg);
+    transition: 0.7s;
+    font-family: cyberpunk;
+    color:rgba(160, 158, 161, 0);
+    background:url(./images/pexels-engin-akyurt-11871838.jpg);
+    background-repeat: repeat-x;
+    background-size:cover;
+    background-position: center;
+    background-attachment: absolute;
+    text-align: center;
+    letter-spacing: 1px;
+    animation:animateConsole 105s linear infinite;
+    transform-style:preserve-3d;
+}
+
+.section1-menu-toggle:hover{
+    box-shadow:inset 0 0 4em var(--clr-neon), 0 0 2em 0 var(--clr-bg);
+    width: 200px;
+    height: 200px;
+    color:rgba(126, 245, 227, 0.695);
+}
+
+@keyframes animateConsole {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 4564px 0;
+    }
+}
+.section1-menu-items{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    margin:0;
+}
+
+.section1-menu-items li {
+    position: absolute;
+    list-style: none;
+    transform-origin: 280px;
+    transition: 0.6s ease;
+    transform: rotate(0deg) translateX(-117px);
+    opacity:1;
+    top:220px;
+}
+
+.section1-menu-items li a{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    place-items: center;
+    background: var(--clr-bg);
+    font-family:cyberpunk;
+    color:var(--clr-neon);
+    border-color: var(--clr-neon) 0.5em;
+    border-style:55px solid;
+    cursor:pointer;
+    box-shadow:inset 0 0 0.1em 0 var(--clr-neon), 0 0 0.6em 0 var(--clr-neon);
+    text-decoration: none;
+}
+
+.section1-menu-window {
+    opacity:0;
+}
+
+/*This regulates Section 2 styling */
+
+.section2 {
+    background-color:#dcdede;
+    box-sizing: border-box;
+    height:40vh;
+    margin:0 auto;
+    transition: 0.7s;
+}
+
+
+.section2-container {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.section2-item {
+    display:flex;
+    width:150px;
+    height:150px;
+    box-shadow: inset 0 0 0.6em 0 var(--clr-bg), 0 0 0.1em 0 var(--clr-bg);
+    align-items: center;
+    justify-content: center;
+    margin-top:70px;
+    border-radius:20%;
+}
+
+/*This regulates Section 3 styling */
+.section3 {
+    display:flex;
+    flex-direction:row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    margin:5em auto;
+    padding:0;
+    width:100%;
+    box-sizing: border-box;
+    height:50vh;
+    background-color:#dcdede;
+    background-repeat:no-repeat;
+}
+
+/*This regulates Section 4 styling */
+.section4{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color:#dcdede;
+    height:40vh;
+    width:75%;
+    margin:0 auto;
+}
+/*This regulates footer styling */
+footer {
+    display:flex;
+    background-color:brown;
+    height:9vh;
+}
